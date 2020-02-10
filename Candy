@@ -1,0 +1,24 @@
+import java.lang.Math;
+public class Candy extends DessertItem{
+
+	double weight;
+	double price;
+	public Candy(String name, double w, double p )
+	{
+		super(name);
+		weight = w;
+		price = p;
+	}
+	
+	
+	public double getCost()
+	{
+		return Math.round(weight * price * 100)/100.0;
+		//return weight * price;
+	}
+	
+	public String toString()
+	{
+		return weight + " lbs. @ " + price + " /lb.\n";
+	}
+}
