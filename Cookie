@@ -1,0 +1,25 @@
+
+public class Cookie extends DessertItem{
+	
+	int quantity;
+	double price;
+	
+	public Cookie(String name,int num , double p)
+	{
+		super(name);
+		quantity = num;
+		price = p;
+	}
+	
+	public double getCost()
+	{
+		
+		double dozen = price / 12;
+		return Math.round(quantity * dozen  * 100 )/100.0;
+	}
+	
+	public String toString()
+	{
+		return quantity + " @ " + price + "/dz.\n"; 
+	}
+}
