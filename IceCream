@@ -1,0 +1,19 @@
+
+public class IceCream extends DessertItem{
+	double price;
+	public IceCream(String name, double p)
+	{
+		super(name);
+		price = p;
+	}
+	
+	public double getCost()
+	{
+		return price;
+	}
+	
+	public String toString()
+	{
+		return name + "(IceCream)               " + getCost();
+	}
+}
