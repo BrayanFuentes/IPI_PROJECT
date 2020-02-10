@@ -1,0 +1,23 @@
+
+public class Sundae extends IceCream {
+	double priceOfTopping;
+	String sundae;
+	String topping;
+	
+	public Sundae(String Sundae, String topping,  double p)
+	{
+		super(Sundae, p);
+		priceOfTopping = p;
+		sundae = Sundae;
+		this.topping = topping;
+	}
+	
+	public double getCost()
+	{
+		return price;
+	}
+	public String toString()
+	{
+		return sundae + "(Sundae) with\n" + topping + "(Topping)           " + getCost();
+	}
+}
