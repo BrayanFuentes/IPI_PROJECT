@@ -1,0 +1,64 @@
+import java.util.ArrayList;
+
+public class Checkout  {
+	double tax = 0.50;
+	ArrayList<DessertItem> checkout = new ArrayList<DessertItem>();
+	public Checkout()
+	{
+		ArrayList<DessertItem> checkout = new ArrayList<DessertItem>();
+		this.checkout = checkout;
+	}
+	
+	public void clear()
+	{
+		for(int i = 0; i < checkout.size();i++)
+		{
+			checkout.remove(i);
+		}
+	}
+	
+	public void enterItem(DessertItem item)
+	{
+		checkout.add(item);
+	}
+	
+	public int numOfItems()
+	{
+		return checkout.size();
+	}
+	
+	public int totalCost()
+	{
+		int totalcost =0;
+		for(int i = 0; i < checkout.size();i++)
+		{
+			double cost = checkout.get(i).getCost();
+			cost = cost *100;
+			totalcost += (int)cost;
+		}
+		return totalcost;
+	}
+	
+	public int totalTax()
+	{
+		double temp = (checkout.size() * tax) * 100;
+		int taxInCents = (int) temp;
+		return taxInCents;
+	}
+	
+	public String toString()
+	{
+		String s = "wow";
+		return s; 
+		
+	}
+	
+	public void setTaxRate(double taxRate)
+	{
+		tax = taxRate;
+	}
+	public double getTaxRate()
+	{
+		return tax;
+	}
+}
