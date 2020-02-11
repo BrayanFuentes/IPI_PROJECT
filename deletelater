@@ -19,3 +19,7 @@ cout << "Playing Solitaire Prime!!!" << endl;
 					cout << ", ";
 				}
 			}
+
+
+return storage[top];
+	top++;
