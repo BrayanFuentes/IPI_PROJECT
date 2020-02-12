@@ -1,4 +1,4 @@
-
+// implements Comparable<DessertItem>
 public abstract class DessertItem {
 
   protected String name;
@@ -27,5 +27,10 @@ public abstract class DessertItem {
  * @return cost of DessertItem
  */
   public abstract double getCost();
-
+/*
+  public static max()
+  {
+    //use compareTo from implementation of Comparable
+  }
+*/
 }
