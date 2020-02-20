@@ -33,6 +33,7 @@ public abstract class DessertItem implements Comparable<DessertItem>{
  * @return cost of DessertItem
  */
   public abstract double getCost();
+  public abstract int getCalorie();
 @Override 
   public int compareTo(DessertItem item)
   {
