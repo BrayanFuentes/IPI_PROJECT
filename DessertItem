@@ -1,12 +1,11 @@
 /*
- * Mimi Opkins
+ * Curtis Nishihira and Brayan Fuentes
  * February 20, 2020
  * Purpose: Main purpose of the class is to represent a dessert item, acts as super class for subclasses that extend.
  * Inputs: the name of the dessert item as a string. 
  * Outputs: the dessert item as a readable string.
  */
-// implements Comparable<DessertItem>
-public abstract class DessertItem {
+public abstract class DessertItem implements Comparable<DessertItem>{
 
   protected String name;
 
