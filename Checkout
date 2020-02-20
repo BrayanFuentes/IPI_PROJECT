@@ -68,7 +68,7 @@ public class Checkout  {
 		String s = "A&S Dessert Shop\n"+"----------------\n";
 		for(int i = 0; i<checkout.size();i++)
 		{
-			s = s + checkout.get(i).toString()+"\n";
+			s += checkout.get(i).toString()+"\n";
 		}
 		return s; 
 	}
