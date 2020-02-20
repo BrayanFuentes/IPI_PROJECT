@@ -38,8 +38,18 @@ public class Candy extends DessertItem{
 
 	@Override
 	public int compareTo(DessertItem arg0) {
-		// TODO Auto-generated method stub
-		return 0;
+		if(calorie > arg0.getCalorie())
+		 {
+			 return 1;
+		 }
+		 if(calorie < arg0.getCalorie())
+		 {
+			 return -1;
+		 }
+		 else
+		 {
+			 return 0;
+		 }
 	}
 	
 }
