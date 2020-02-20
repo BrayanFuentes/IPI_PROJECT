@@ -1,4 +1,10 @@
-
+/*
+ * Curtis Nishihira and Brayan Fuentes Lopez
+ * February 20, 2020
+ * Purpose: Main purpose of the class is to test the methods and constructors of each dessert item subclass.
+ * Inputs: takes no input.
+ * Outputs: outputs the menu as a user readable list.
+ */
 public class tester {
 	public static void main(String args[])
 	{
