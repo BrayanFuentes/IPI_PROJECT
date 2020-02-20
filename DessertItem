@@ -33,10 +33,33 @@ public abstract class DessertItem implements Comparable<DessertItem>{
  * @return cost of DessertItem
  */
   public abstract double getCost();
-/*
-  public static max()
+@Override 
+  public int compareTo(DessertItem item)
   {
-    //use compareTo from implementation of Comparable
+	 int main = this.getCalorie();
+	 int other = item.getCalorie();
+	 if(main > other)
+	 {
+		 return 0;
+	 }
+	 else
+	 {
+		 return 1;
+	 }
   }
-*/
+  
+  public static String max(ArrayList<DessertItem> item)
+  {
+	  DessertItem max = item.get(0);
+	  
+	  for(int i = 1; i < item.size();i++)
+	  {
+		  if(max.compareTo(item.get(i)) == 1)
+		  {
+			  max = item.get(i);
+		  }
+	  }
+	  return max.getName();
+  }
+
 }
