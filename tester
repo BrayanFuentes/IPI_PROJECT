@@ -5,32 +5,152 @@
  * Inputs: takes no input.
  * Outputs: outputs the menu as a user readable list.
  */
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class tester {
 	public static void main(String args[])
 	{
 		ArrayList<DessertItem> list = new ArrayList<DessertItem>();
+		//ArrayList<DessertItem> list2 = new ArrayList<DessertItem>();
 		Checkout checkout = new Checkout();
-		DessertItem icecream = new IceCream("Strawberry" , 1.45,600);
+		DessertItem icecream = new IceCream("Vanilla" , 10.05,500);
 		checkout.enterItem(icecream);
-		DessertItem sundae = new Sundae("Caramel" , "Vanilla Ice Cream", 1.55,500);
+		DessertItem icecream2 = new IceCream("Chocolate" , 9.99,500);
+		checkout.enterItem(icecream2);
+		DessertItem sundae = new Sundae("Caramel" , "Hot Fudge",7.70,600);
 		checkout.enterItem(sundae);
-		DessertItem candy = new Candy("Gummy Worms" , 1.33,.89,230);
-		checkout.enterItem(candy);
-		DessertItem cookie = new Cookie("Chocolate Chip Cookies", 4, 3.99,180);
+		DessertItem sundae2 = new Sundae("BananaSplit" , "Strawberries", 6.90,560);
+		checkout.enterItem(sundae2);
+		DessertItem cookie = new Cookie("Chocolate Chip Cookies", 17, 4.99,250);
 		checkout.enterItem(cookie);
-		DessertItem candy1 = new Candy("Salt Water Taffy" , 1.50,2.09,260);
-		checkout.enterItem(candy1);
-		DessertItem candy2 = new Candy("Candy Corn" , 3.00,1.09,330);
+		DessertItem cookie2 = new Cookie("Oatmeal Cookies", 15, 3.99,240);
+		checkout.enterItem(cookie2);
+		DessertItem candy = new Candy("Candy Corn" , 1.5,7.25,500);
+		checkout.enterItem(candy);
+		DessertItem candy2= new Candy("Lolipop", 2.5,8.25,640);
 		checkout.enterItem(candy2);
-		checkout.setTaxRate(.129);
-		System.out.println(checkout.totalCost());
-		System.out.println(checkout.totalTax());
-		System.out.println(checkout.totalTax() + checkout.totalCost());
-		System.out.println(checkout.numOfItems());
-		checkout.clear();
-		System.out.println(checkout.numOfItems());
-	
+		checkout.setTaxRate(.757);
+		list.add(candy);
+		list.add(candy2);
+		list.add(cookie);
+		list.add(cookie2);
+		list.add(icecream);
+		list.add(icecream2);
+		list.add(sundae);
+		list.add(sundae2);
+		//this is where the Candy test begins
+		System.out.println("CANDY TEST:");
+		System.out.println(candy.toString());
+		System.out.println(candy.getName() + " calories: " + candy.getCalorie()+ "\n") ;
+		System.out.println(candy2.toString());
+		System.out.println(candy2.getName() + " calories: " + candy2.getCalorie()+ "\n");
+		System.out.println("-----------------------------------");
+		//this is where the Cookie test begins
+		System.out.println("COOKIE TEST:");
+		System.out.println(cookie.toString());
+		System.out.println(cookie.getName() + " calories: " + cookie.getCalorie()+ "\n");
+		System.out.println(cookie2.toString());
+		System.out.println(cookie2.getName() + " calories: " + cookie2.getCalorie()+ "\n") ;
+		System.out.println("-----------------------------------");
+		//this is where the Icecream test begins
+		System.out.println("ICECREAM TEST:");
+		System.out.println(icecream.toString());
+		System.out.println(icecream.getName() + "(Icecream) calories: " + icecream.getCalorie()+ "\n");
+		System.out.println(icecream2.toString());
+		System.out.println(icecream2.getName() + "(Icecream) calories: " + icecream2.getCalorie()+ "\n");
+		System.out.println("-----------------------------------");
+		//this is where the sundae test begins
+		System.out.println("SUNDAE TEST:");
+		System.out.println(sundae.toString());
+		System.out.println(sundae.getName() + "(Sundae) calories: " + sundae.getCalorie()+ "\n");
+		System.out.println(sundae2.toString());
+		System.out.println(sundae2.getName() + "(Sundae) calories: " + sundae2.getCalorie()+ "\n");
+		System.out.println("-----------------------------------");
+		//this is where the checkout tester starts
+
+		System.out.println(checkout.toString());
+		System.out.printf("Tax:    %.2f\n",checkout.totalTax());
+		System.out.printf("Total Cost:    %.2f\n",checkout.totalCost());
+		System.out.println("-----------------------------------");
+		
+		// max test
+		System.out.println("Max Test With Same DessertItem Types:\n");
+		
+		if(candy.compareTo(candy2) == -1)
+		{
+			System.out.println( candy2.getName() + " with "+ candy2.getCalorie() +" calories is bigger than " + candy.getName() + " with "+ candy.getCalorie()+" calories.");
+		}
+		else if(candy.compareTo(candy2) == 1)
+		{
+			System.out.println( candy.getName() + " with "+ candy.getCalorie() +" calories is bigger than " + candy2.getName() + " with "+ candy2.getCalorie()+" calories.");
+		}
+		else
+		{
+			System.out.println( candy.getName() + " with "+ candy.getCalorie() +" calories is equal to " + candy2.getName() + " with "+ candy2.getCalorie()+" calories.");
+		}
+		
+		if(cookie.compareTo(cookie2) == -1)
+		{
+			System.out.println( cookie2.getName() + " with "+ cookie2.getCalorie() +" calories is bigger than " + cookie.getName() + " with "+ cookie.getCalorie()+" calories.");
+		}
+		else if(cookie.compareTo(cookie2) == 1)
+		{
+			System.out.println( cookie.getName() + " with "+ cookie.getCalorie() +" calories is bigger than " + cookie2.getName() + " with "+ cookie2.getCalorie()+" calories.");
+		}
+		else
+		{
+			System.out.println( cookie.getName() + " with "+ cookie.getCalorie() +" calories is equal to " + cookie2.getName() + " with "+ cookie2.getCalorie()+" calories.");
+
+		}
+		System.out.println("-----------------------------------");
+		//max test with different items
+		System.out.println("Max Test With Different DessertItem Types:\n");
+		if(cookie2.compareTo(candy2) == -1)
+		{
+			System.out.println( candy2.getName() + " with "+ candy2.getCalorie() +" calories is bigger than " + cookie2.getName() + " with "+ cookie2.getCalorie()+" calories.");
+		}
+		else if(cookie2.compareTo(candy2) == 1)
+		{
+			System.out.println( cookie2.getName() + " with "+ cookie2.getCalorie() +" calories is bigger than " + candy2.getName() + " with "+ candy2.getCalorie()+" calories.");
+		}
+		else
+		{
+			System.out.println( cookie2.getName() + " with "+ cookie2.getCalorie() +" calories is equal to " + candy2.getName() + " with "+ candy2.getCalorie()+" calories.");
+		}
+		
+		
+		if(candy.compareTo(icecream) == -1)
+		{
+			System.out.println( icecream.getName() + " with "+ icecream.getCalorie() +" calories is bigger than " + candy.getName() + " with "+ candy.getCalorie()+" calories.");
+		}
+		else if(candy.compareTo(icecream) == 1)
+		{
+			System.out.println( candy.getName() + " with "+ candy.getCalorie() +" calories is bigger than " + icecream.getName() + " with "+ icecream.getCalorie()+" calories.");
+		}
+		else
+		{
+			System.out.println( candy.getName() + " with "+ candy.getCalorie() +" calories is equal to " + icecream.getName() + " with "+ icecream.getCalorie()+" calories.");
+		}
+		System.out.println("-----------------------------------");
+		//unsorted 
+		System.out.println("The unsorted list DessertList is:\n");
+		for(int i = 0; i < list.size();i++)
+		{
+			System.out.println(list.get(i).getName() + " has " + list.get(i).getCalorie() + " calories.");
+		}
+		System.out.println("-----------------------------------");
+		
+		
+		//sorted
+		System.out.println("The sorted list DessertList is:\n");
+		Collections.sort(list);
+		for(int i = 0; i < list.size();i++)
+		{
+			System.out.println(list.get(i).getName() + " has " + list.get(i).getCalorie() + " calories.");
+		}
 	
 	}
+	
 	
 }
