@@ -48,6 +48,21 @@ public abstract class DessertItem implements Comparable<DessertItem>{
 		 return 1;
 	 }
   }
+  public int compareTo(DessertItem item)
+  {
+	 if(this.getCalorie() > item.getCalorie())
+	 {
+		 return 1;
+	 }
+	 if(this.getCalorie() < item.getCalorie())
+	 {
+		 return 0;
+	 }
+	 else
+	 {
+		 return 0;
+	 }
+  }
   
   public static String max(ArrayList<DessertItem> item)
   {
