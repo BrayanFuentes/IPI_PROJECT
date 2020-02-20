@@ -10,11 +10,13 @@ public class Candy extends DessertItem{
 
 	double weight;
 	double price;
-	public Candy(String name, double w, double p )
+	int calorie;
+	public Candy(String name, double w, double p, int cal )
 	{
 		super(name);
 		weight = w;
 		price = p;
+		calorie = cal;
 	}
 	
 	
@@ -24,8 +26,22 @@ public class Candy extends DessertItem{
 		//return weight * price;
 	}
 	
+	public int getCalorie()
+	{
+		return calorie;
+	}
+	
 	public String toString()
 	{
-		return weight + " lbs. @ " + price + " /lb.\n";
+		return weight + " lbs. @ " + price + " /lb.";
 	}
+
+
+	@Override
+	public int compareTo(DessertItem arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 }
+
