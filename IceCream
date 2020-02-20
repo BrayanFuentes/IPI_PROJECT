@@ -5,12 +5,15 @@
  * Inputs: the price as a double.
  * Outputs: The total cost and the ice cream object as a readable string.
  */
+
 public class IceCream extends DessertItem{
 	double price;
-	public IceCream(String name, double p)
+	int calorie;
+	public IceCream(String name, double p, int cal)
 	{
 		super(name);
 		price = p;
+		calorie = cal;
 	}
 	
 	public double getCost()
@@ -18,8 +21,19 @@ public class IceCream extends DessertItem{
 		return price;
 	}
 	
+	public int getCalorie()
+	{
+		return calorie;
+	}
+	
 	public String toString()
 	{
 		return name + "(IceCream)               " + getCost();
+	}
+
+	@Override
+	public int compareTo(DessertItem o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
