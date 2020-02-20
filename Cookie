@@ -33,7 +33,7 @@ public class Cookie extends DessertItem{
 	
 	public String toString()
 	{
-		return quantity + " @ " + price + "/dz.\n"; 
+		return quantity + " @ " + price + "/dz.\n" + name + "                     " + price; 
 	}
 
 	@Override
