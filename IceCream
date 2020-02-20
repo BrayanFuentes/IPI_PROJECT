@@ -1,4 +1,10 @@
-
+/*
+ * Curtis Nishihira and Brayan Fuentes Lopez
+ * February 20, 2020
+ * Purpose: Main purpose of the class is to represent a ice cream object and extend the dessert super class
+ * Inputs: the price as a double.
+ * Outputs: The total cost and the ice cream object as a readable string.
+ */
 public class IceCream extends DessertItem{
 	double price;
 	public IceCream(String name, double p)
