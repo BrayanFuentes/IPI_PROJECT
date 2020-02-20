@@ -1,3 +1,10 @@
+/*
+ * Curtis Nishihira and Brayan Fuentes Lopez
+ * February 20, 2020
+ * Purpose: Main purpose of the class is to simulate checking out and display prices and items accompanying.
+ * Inputs: Array list of dessert items/objects.
+ * Outputs: Array list as a readable string, total numver of items, total amount of tax, and tax rate.
+ */
 import java.util.ArrayList;
 
 public class Checkout  {
