@@ -33,16 +33,17 @@ public class Candy extends DessertItem{
 	
 	public String toString()
 	{
-		return weight + " lbs. @ " + price + " /lb.\n"+ name + "                     " + price;
+		return weight + " lbs. @ " + price + " /lb.\n"+ name + "                     " + getCost() ;
 	}
 
+
 	@Override
-	public int compareTo(DessertItem arg0) {
-		if(calorie > arg0.getCalorie())
+	public int compareTo(DessertItem o) {
+		if(calorie > o.getCalorie())
 		 {
 			 return 1;
 		 }
-		 if(calorie < arg0.getCalorie())
+		 if(calorie < o.getCalorie())
 		 {
 			 return -1;
 		 }
@@ -53,4 +54,3 @@ public class Candy extends DessertItem{
 	}
 	
 }
-
