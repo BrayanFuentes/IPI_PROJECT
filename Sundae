@@ -5,17 +5,24 @@
  * Inputs: String name of sundae, string name for topping, and double for the price of the topping.
  * Outputs: The sundae object as a string and the total price.
  */
+
 public class Sundae extends IceCream {
 	double priceOfTopping;
 	String sundae;
 	String topping;
+	int calorie;
 	
-	public Sundae(String Sundae, String topping,  double p)
+	public Sundae(String Sundae, String topping,  double p, int cal)
 	{
-		super(Sundae, p);
+		super(Sundae, p,cal);
 		priceOfTopping = p;
 		sundae = Sundae;
 		this.topping = topping;
+		
+	}
+	public int getCalorie()
+	{
+		return calorie;
 	}
 	
 	public double getCost()
