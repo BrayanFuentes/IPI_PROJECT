@@ -8,18 +8,27 @@
 public class tester {
 	public static void main(String args[])
 	{
-		DessertItem candy = new Candy("smarties",1.5,7.25);
-		System.out.println("CANDY TEST:\n");
-		System.out.println(candy.toString());
-		System.out.println(candy.getName() +"(Candy)       " + candy.getCost());
-		DessertItem cookie = new Cookie("chip",17,4.99);
-		System.out.println("COOKIE TEST:\n");
-		System.out.println(cookie.toString());
-		System.out.println("\n" + cookie.getCost());
-		DessertItem icecream = new IceCream("Vanilla" , 10.05);
-		System.out.println("ICECREAM TEST:\n");
-		
-		System.out.println(icecream.toString());
+		ArrayList<DessertItem> list = new ArrayList<DessertItem>();
+		Checkout checkout = new Checkout();
+		DessertItem icecream = new IceCream("Strawberry" , 1.45,600);
+		checkout.enterItem(icecream);
+		DessertItem sundae = new Sundae("Caramel" , "Vanilla Ice Cream", 1.55,500);
+		checkout.enterItem(sundae);
+		DessertItem candy = new Candy("Gummy Worms" , 1.33,.89,230);
+		checkout.enterItem(candy);
+		DessertItem cookie = new Cookie("Chocolate Chip Cookies", 4, 3.99,180);
+		checkout.enterItem(cookie);
+		DessertItem candy1 = new Candy("Salt Water Taffy" , 1.50,2.09,260);
+		checkout.enterItem(candy1);
+		DessertItem candy2 = new Candy("Candy Corn" , 3.00,1.09,330);
+		checkout.enterItem(candy2);
+		checkout.setTaxRate(.129);
+		System.out.println(checkout.totalCost());
+		System.out.println(checkout.totalTax());
+		System.out.println(checkout.totalTax() + checkout.totalCost());
+		System.out.println(checkout.numOfItems());
+		checkout.clear();
+		System.out.println(checkout.numOfItems());
 	
 	
 	}
