@@ -1,4 +1,10 @@
-
+/*
+ * Curtis Nishihira and Brayan Fuentes Lopez
+ * February 20, 2020
+ * Purpose: Main purpose of the class is to represent a cookie object and extend the dessert super class
+ * Inputs: the quantity as an integer and the price as a double. 
+ * Outputs: The total cost and the cookie object as a readable string.
+ */
 public class Cookie extends DessertItem{
 	
 	int quantity;
