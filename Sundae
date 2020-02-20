@@ -10,7 +10,6 @@ public class Sundae extends IceCream {
 	double priceOfTopping;
 	String sundae;
 	String topping;
-	int calorie;
 	
 	public Sundae(String Sundae, String topping,  double p, int cal)
 	{
