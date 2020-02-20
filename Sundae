@@ -1,4 +1,10 @@
-
+/*
+ * Curtis Nishihira and Brayan Fuentes Lopez
+ * February 20, 2020
+ * Purpose: Main purpose of the class is to represent a sundae object and extend the dessert super class
+ * Inputs: String name of sundae, string name for topping, and double for the price of the topping.
+ * Outputs: The sundae object as a string and the total price.
+ */
 public class Sundae extends IceCream {
 	double priceOfTopping;
 	String sundae;
