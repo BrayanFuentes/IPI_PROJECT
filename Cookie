@@ -5,16 +5,18 @@
  * Inputs: the quantity as an integer and the price as a double. 
  * Outputs: The total cost and the cookie object as a readable string.
  */
+
 public class Cookie extends DessertItem{
 	
 	int quantity;
 	double price;
-	
-	public Cookie(String name,int num , double p)
+	int calorie;
+	public Cookie(String name,int num , double p, int cal)
 	{
 		super(name);
 		quantity = num;
 		price = p;
+		calorie = cal;
 	}
 	
 	public double getCost()
@@ -24,8 +26,19 @@ public class Cookie extends DessertItem{
 		return Math.round(quantity * dozen  * 100 )/100.0;
 	}
 	
+	public int getCalorie()
+	{
+		return calorie;
+	}
+	
 	public String toString()
 	{
 		return quantity + " @ " + price + "/dz.\n"; 
+	}
+
+	@Override
+	public int compareTo(DessertItem o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
