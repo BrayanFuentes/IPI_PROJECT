@@ -33,9 +33,8 @@ public class Candy extends DessertItem{
 	
 	public String toString()
 	{
-		return weight + " lbs. @ " + price + " /lb.";
+		return weight + " lbs. @ " + price + " /lb.\n"+ name + "                     " + price;
 	}
-
 
 	@Override
 	public int compareTo(DessertItem arg0) {
