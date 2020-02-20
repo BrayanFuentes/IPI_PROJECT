@@ -5,6 +5,7 @@
  * Inputs: Array list of dessert items/objects.
  * Outputs: Array list as a readable string, total numver of items, total amount of tax, and tax rate.
  */
+
 import java.util.ArrayList;
 
 public class Checkout  {
@@ -15,11 +16,6 @@ public class Checkout  {
 	{
 		ArrayList<DessertItem> checkout = new ArrayList<DessertItem>();
 		this.checkout = checkout;
-	}
-	
-	public void clear()
-	{
-		checkout.clear();
 	}
 	
 	public void enterItem(DessertItem item)
@@ -42,6 +38,7 @@ public class Checkout  {
 			totalcost += (int)cost;
 		}
 		double total = totalcost / 100.0;
+		total += totalTax();
 		return total;
 	}
 	
@@ -52,16 +49,7 @@ public class Checkout  {
 		double total = taxInCents / 100.0 ;	
 		return total;
 	}
-	/*
-	public String toString()
-	{
-		for(int i = 0; i < checkout.size();i++)
-		{
-			System.out.printf("%-15s %15d", checkout.get(i).toString(), checkout.get(i).getCost());
-		}
-		
-	}
-	*/
+	
 	public String toString()
 	{
 		String s = "A&S Dessert Shop\n"+"----------------\n";
@@ -71,6 +59,7 @@ public class Checkout  {
 		}
 		return s; 
 	}
+	
 	public void setTaxRate(double taxRate)
 	{
 		tax = taxRate;
@@ -80,3 +69,4 @@ public class Checkout  {
 		return tax;
 	}
 }
+
