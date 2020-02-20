@@ -32,7 +32,7 @@ public class Checkout  {
 		return checkout.size();
 	}
 	
-	public int totalCost()
+	public double totalCost()
 	{
 		int totalcost =0;
 		for(int i = 0; i < checkout.size();i++)
@@ -41,14 +41,16 @@ public class Checkout  {
 			cost = cost *100;
 			totalcost += (int)cost;
 		}
-		return totalcost;
+		double total = totalcost / 100.0;
+		return total;
 	}
 	
-	public int totalTax()
+	public double totalTax()
 	{
 		double temp = (checkout.size() * tax) * 100;
 		int taxInCents = (int) temp;
-		return taxInCents;
+		double total = taxInCents / 100.0 ;	
+		return total;
 	}
 	/*
 	public String toString()
